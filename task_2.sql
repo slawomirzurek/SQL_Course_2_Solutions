@@ -12,7 +12,7 @@ SELECT
     regexp_substr(tekst, '[0-9]+[,][0-9]')*1 AS SKOK_1,
     CASE
         WHEN REGEXP_LIKE (tekst, '[m]\s[–]') THEN NULL
-        ELSE (regexp_replace(regexp_substr(tekst, '[m]\s[0-9]+[,][0-9]\s[m]'), '[m\s]', ''))*1
+        ELSE regexp_replace(regexp_substr(tekst, '[m]\s[0-9]+[,][0-9]\s[m]'), '[m\s]', '')*1
     END SKOK_2,
     regexp_replace(regexp_substr(tekst, '[0-9]+[,][0-9]\s(pkt)\s\d'), '\s(pkt)\s[0-9]', '')*1 AS NOTA,
     TRIM(replace(regexp_substr(tekst, '(\s\d\.)'), '.',''))*1 AS LOKATA,
