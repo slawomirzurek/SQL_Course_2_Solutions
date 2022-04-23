@@ -1,5 +1,3 @@
--- Zadanie 4 Slawomir Zurek 2022S3K1U29
-
 WITH cte AS (
 SELECT * FROM 
 (
