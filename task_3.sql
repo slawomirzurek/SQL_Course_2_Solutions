@@ -1,5 +1,3 @@
--- Zadanie 3 Slawomir Zurek 2022S3K1U29
-
 CREATE VIEW v_zadanie_3 AS SELECT * FROM(
 WITH tab_1 AS (
 SELECT
